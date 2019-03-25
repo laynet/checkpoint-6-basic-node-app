@@ -1,5 +1,8 @@
 1. What is a Node module?
+  a set of functions to include in your app that acts much like a javascript library. It's code that is grouped together for the purposes of sharing and reuse.
 
 2. What is the main difference between exports and module.exports?
+  exports is not returned by require() and is just a convenience variable so module authors can write less code. module.exports is the object reference that gets returned from.
 
 3. Why is using exports recommended?
+  exports is recommended because it will not overwrite whatever you have assigned to module.exports because exports is a reference to module.exports and cannot reassign the actual object module.exports. exports is recommended unless you are trying to make module be a specific object type
